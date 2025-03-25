@@ -1,6 +1,7 @@
+/* src/Styles/Banner.css */
 .banner {
-  background-color: #ff4d4d;
-  color: #fff;
+  background-color: #B4261C; /* Updated to match the screenshot */
+  color: #fff; /* Updated to match the screenshot */
   padding: 10px 0;
   font-size: 16px;
   text-transform: uppercase;
@@ -9,19 +10,23 @@
   overflow: hidden;
 }
 
-.banner span {
-  display: inline-block;
-  animation: scroll 10s linear infinite;
+.banner-content {
+  display: flex;
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: scroll 20s linear infinite; /* Add scrolling animation */
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.banner-item {
+  margin-right: 30px; /* Add gap between text items */
 }
+
+.banner-dot {
+  color: #fff; 
+  margin: 0 20px; 
+  font-size: 12px; 
+}
+
+
 
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
@@ -29,6 +34,17 @@
     font-size: 10px;
     padding: 5px 0;
   }
+
+  .banner-item {
+    margin-right: 20px; 
+  }
+
+  .banner-dot {
+    margin: 0 15px; 
+    font-size: 8px;
+  }
+
+  
 }
 
 /* Tablet (min-width: 481px and max-width: 768px) */
@@ -36,4 +52,15 @@
   .banner {
     font-size: 12px;
   }
+
+  .banner-item {
+    margin-right: 25px; /* Slightly smaller gap for tablet */
+  }
+
+  .banner-dot {
+    margin: 0 18px; /* Slightly smaller gap around the dot */
+    font-size: 10px;
+  }
+
+  
 }

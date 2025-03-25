@@ -16,6 +16,12 @@ function Hero() {
               alt="sharingan"
               className="sharingan"
             />
+            <div className="hero-line">
+              <span className="line-red"></span>
+              <span className="line-gray"></span>
+              <span className="line-gray"></span>
+              <span className="line-gray"></span>
+            </div>
           </div>
 
           <div className="hero-text">
@@ -24,7 +30,7 @@ function Hero() {
               WeebShop
             </h1>
             <p>
-              The best lifestyle/streetwear anime market in{" "}
+              The best lifestyle/streetwear anime merchandise in{" "}
               <br className="mobile-break" />
               Nigeria.
             </p>

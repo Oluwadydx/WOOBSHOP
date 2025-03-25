@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import '../Styles/Header.css';
 
 function Header() {
-  const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value);
@@ -24,7 +25,7 @@ function Header() {
         </div>
         <div className="logo">
           <img src="/assests/Frames/weebshop-logo.png" alt="WeebShop Logo" />
-          <span>WeebShop</span>
+          <span>Weebshop</span>
         </div>
         <div className="search-cart">
           <div className="search-container">
@@ -33,6 +34,7 @@ function Header() {
               placeholder="Search"
               value={searchQuery}
               onChange={handleSearch}
+              className="search-input"
             />
             <img src="/assests/Icons/search.png" alt="Search" className="search-icon" />
           </div>

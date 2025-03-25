@@ -1,11 +1,12 @@
 import React from "react";
 import "../Styles/Shop.css";
+import { FaShoppingCart } from "react-icons/fa"; // Import the cart icon from React Icons
 
 function Shop() {
   const products = [
     {
       id: 1,
-      name: "Anime Tees",
+      name: "Nino Tee",
       price: "₦10,500",
       image: "/assests/Frames/naruto-tshirt.png",
     },
@@ -35,7 +36,7 @@ function Shop() {
     },
     {
       id: 6,
-      name: "Anime Tees",
+      name: "Nino Tee",
       price: "₦10,500",
       image: "/assests/Frames/naruto-tshirt.png",
     },
@@ -57,7 +58,7 @@ function Shop() {
     <section className="shop">
       <h2>SHOP</h2>
       <div className="filter-nav">
-        <a href="#" className="active">
+        <a href="#" className="filter-active">
           ALL
         </a>
         <a href="#">MY HERO ACADEMIA</a>
@@ -71,14 +72,20 @@ function Shop() {
       <div className="product-grid">
         {products.map((product) => (
           <div className="product" key={product.id}>
-            <img src={product.image} alt={product.name} />
-            <p>{product.name}</p>
-            <p className="price">{product.price}</p>
-            <button className="add-to-cart">🛒</button>
+            <div className="product-image">
+              <img src={product.image} alt={product.name} />
+              <button className="add-to-cart">
+                <FaShoppingCart /> {/* Use the React Icons component */}
+              </button>
+            </div>
+            <div className="product-details">
+              <p className="product-name">{product.name}</p>
+              <p className="price">{product.price}</p>  
+            </div>
           </div>
         ))}
       </div>
-      <button className="see-all">SEE ALL</button>
+      <button className="see-all">SEE ALL </button>
     </section>
   );
 }
