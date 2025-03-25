@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/Shop.css";
-import { FaShoppingCart } from "react-icons/fa"; // Import the cart icon from React Icons
+import { FaShoppingCart } from "react-icons/fa";
 
 function Shop() {
   const products = [
@@ -12,7 +12,7 @@ function Shop() {
     },
     {
       id: 2,
-      name: "AOT Bracelets",
+      name: "AOT Bracelet",
       price: "₦3,500",
       image: "/assests/Frames/aot-bracelets.png",
     },
@@ -48,7 +48,7 @@ function Shop() {
     },
     {
       id: 8,
-      name: "AOT Bracelets",
+      name: "AOT Bracelet",
       price: "₦3,500",
       image: "/assests/Frames/aot-bracelets.png",
     },
@@ -73,19 +73,19 @@ function Shop() {
         {products.map((product) => (
           <div className="product" key={product.id}>
             <div className="product-image">
-              <img src={product.image} alt={product.name} />
+              <img src={product.image} alt={`${product.name} product image`} />
               <button className="add-to-cart">
-                <FaShoppingCart /> {/* Use the React Icons component */}
+                <FaShoppingCart />
               </button>
             </div>
             <div className="product-details">
               <p className="product-name">{product.name}</p>
-              <p className="price">{product.price}</p>  
+              <p className="price">{product.price}</p>
             </div>
           </div>
         ))}
       </div>
-      <button className="see-all">SEE ALL </button>
+      <button className="see-all">SEE ALL</button>
     </section>
   );
 }
